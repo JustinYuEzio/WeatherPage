@@ -1,0 +1,98 @@
+<div class="container" style="border:solid 0px yellowgreen">
+    <div class="row" style="border:solid 0px red;color:rgb(162,205,234)">
+        1
+    </div>
+    <div class="row" style="border:solid 0px red;color:rgb(162,205,234)">
+        1
+    </div>
+    <div class="row">
+        <div class="col-12" id="city" style="border:solid 0px red;padding-left: 2vmax;">
+            {{city}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-6" style="border:solid 0px red;padding-left: 2vmax">
+            <span id="tz">{{timezone}}</span>
+            <br>
+            <br>
+            <div class="row" style="border: solid 0px green;padding-left: 1vmax">
+                <span class="tmp">{{temp}}</span>
+                <!-- <span class="tmp" style="color:rgb(162,205,234)">1</span> -->
+                <span><img id="sign"
+                        src="https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_shape_oval-512.png"
+                        class="img-fluid">
+                </span>
+                <span id="f">F</span>
+            </div>
+            <br>
+            <span id="sum" style="border:solid 0px red">{{sum}}</span>
+            <br>
+            <br>
+            <br>
+
+        </div>
+        <div class="col-sm-4 col-6" id="seal" style="border:solid 0px yellow;font-size: 4vmin;">
+            <div class="row" style="border:solid 0px red;color:rgb(162,205,234)">
+                1
+            </div>
+            <div id="pic">
+                <img class="img-fluid " src={{link}} style="border-radius: 50%;">
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <br>
+    </div>
+
+    <table class="table text-nowrap">
+        <tr class="row">
+            <th class="col-2 col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!humi_zero">
+                <img class="img-fluid mx-auto d-block" width="50vw" height="50vw" ngbTooltip="Humidity"
+                    src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-16-512.png">
+            </th>
+            <th class="col-2 col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!pres_zero">
+                <img class="img-fluid mx-auto d-block" width="50vw" height="50vw" ngbTooltip="Pressure"
+                    src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-25-512.png">
+            </th>
+            <th class="col-2 col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!ws_zero">
+                <img class="img-fluid mx-auto d-block" width="50vw" height="50vw" ngbTooltip="Windspeed"
+                    src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-27-512.png">
+            </th>
+            <th class="col-2  col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!visi_zero">
+                <img class="img-fluid mx-auto d-block" width="50vw" height="50vw" ngbTooltip="Visibility"
+                    src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-30-512.png">
+            </th>
+            <th class="col-2  col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!cc_zero">
+                <img class="img-fluid mx-auto d-block" width="50vw" height="50vw" ngbTooltip="Cloudcover"
+                    src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-28-512.png">
+            </th>
+            <th class="col-2  col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!oz_zero">
+                <img class="img-fluid mx-auto d-block" width="50vw" height="50vw" ngbTooltip="Ozone"
+                    src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-24-512.png">
+            </th>
+        </tr>
+        <tr class="row">
+            <td class="col-2 col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!humi_zero">
+                <p class="text-center" id="humi">{{humi}}</p>
+            </td>
+            <td class="col-2 col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!pres_zero">
+                <p class="text-center" id="pres">{{pres}}</p>
+
+            </td>
+            <td class="col-2 col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!ws_zero">
+                <p class="text-center" id="ws">{{ws}}</p>
+
+            </td>
+            <td class="col-2  col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!visi_zero">
+                <p class="text-center" id="visi">{{visi}}</p>
+            </td>
+            <td class="col-2  col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!cc_zero">
+                <p class="text-center" id="cc">{{cc}}</p>
+            </td>
+            <td class="col-2  col-sm-2" style="border: solid 0px red;text-align: center;" *ngIf="!oz_zero">
+                <p class="text-center" id="oz">{{oz}}</p>
+            </td>
+        </tr>
+    </table>
+</div>

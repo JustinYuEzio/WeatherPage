@@ -1,0 +1,39 @@
+@media screen and (min-device-width: 500px) {
+    #city {
+        font-size: 1.8vmax;
+    }
+    .tmp {
+        font-size: 2.3vmax;
+    }
+    #pic {
+        margin-left: 0vmax;
+        margin-top: 0vmax;
+        width:10vmin;
+        height:10vmin;
+    }
+    #sign {
+        width:0.8vmax;
+        height:0.8vmax;
+        margin-top:-3.5vmax;
+        margin-left:3vmax;
+    }
+}
+@media screen and (max-device-width: 500px) {
+    #city, .tmp {
+        font-size: 3vmax;
+    }
+    #sign {
+        width:1.0vmax;
+        height:1.0vmax;
+        margin-top:-5.5vmax;
+        margin-left:3.5vmax;
+    }
+    #pic {
+        margin-left: -10vmax;
+        margin-top: 0vmax;
+        width:14vmin;
+        height:14vmin;
+    }
+
+    
+}

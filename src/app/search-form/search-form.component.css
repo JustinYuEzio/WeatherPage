@@ -1,0 +1,24 @@
+#form{
+    border-radius:5px;
+    color:white;
+    margin-top: 5%;
+    background-color: rgb(104,138,160);
+    border:solid 1px black;
+    box-shadow: 8px 3px 3px grey;
+}
+#label_street:after, #label_city:after, #label_state:after {
+        content: ' *';
+        color: red;
+}
+#searchBtn, #clearBtn {
+    outline-color: red;
+    border:solid 1px black;
+    background-color: white;
+}
+#searchBtn:active, #clearBtn:active {
+    background-color: gray;
+    outline: none;
+}
+#twitter:hover, #star:hover, #star_board:hover {
+    background-color: aliceblue;
+}

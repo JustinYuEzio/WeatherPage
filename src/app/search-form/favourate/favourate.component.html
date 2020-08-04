@@ -1,0 +1,75 @@
+<div class="alert alert-warning col-12 col-sm-10 offset-sm-1" *ngIf="noRecord"> No records.</div>
+<div class="container col-12 col-sm-9" *ngIf="!noRecord">
+    <table class="table">
+        <tr class="row" style="background-color: rgb(104,138,160);">
+            <th class="col-1 col-sm-1" style="border: solid 0px red;text-align: center;">
+                #
+            </th>
+            <th class="col-3 col-sm-3 " style="border: solid 0px red;text-align: center;">
+                Image
+            </th>
+            <th class="col-3 col-sm-3" style="border: solid 0px red;text-align: center;">
+                City
+            </th>
+            <th class="col-3  col-sm-2" style="border: solid 0px red;text-align: center;">
+                State
+            </th>
+            <th class="col-2  col-sm-3" style="border: solid 0px red;text-align: center;">
+                Wish List
+            </th>
+        </tr>
+        <div *ngFor="let weather of weatherInfo; let i = index">
+            <div *ngIf="i % 2 == 0">
+                <tr class="row" style="background-color: rgb(170,203,231);">
+                    <th class="col-1 col-sm-1 align-middle" style="border: solid 0px yellow;text-align: center;">
+                        <a class="text-center" style="margin-top: auto; margin-bottom: auto;">{{i + 1}}</a>
+                    </th>
+                    <input hidden value={{i}} #index type="text">
+                    <th class="col-3 col-sm-3 " style="border: solid 0px red;text-align: center;">
+                        <img src={{weather.link}} class="img-fluid" width="60" style="border-radius: 50%;">
+                    </th>
+                    <th class="col-3 col-sm-3" style="border: solid 0px red;text-align: center;">
+                        <a (click)="test(weather.city, weather.state)" ngbTooltip={{weather.city}}
+                            style="color:blue;cursor: pointer;">{{weather.city}}</a>
+                    </th>
+                    <input hidden value={{weather.city}} #city type="text">
+                    <th class="col-2  col-sm-2" style="border: solid 0px red;text-align: center;">
+                        {{weather.state}}
+                    </th>
+                    <th class="col-3  col-sm-3" style="border: solid 0px red;text-align: center;">
+                        <button type="button" class="btn btn-light" (click)="[deleteItem(city.value, index.value)]">
+                            <i class="material-icons fluid" style="color:rgb(205,164,70)">
+                                delete
+                            </i></button>
+
+                    </th>
+                </tr>
+            </div>
+            <div *ngIf="i % 2 != 0">
+                <tr class="row" style="background-color: rgb(104,138,160);">
+                    <th class="col-1 col-sm-1 align-middle" style="border: solid 0px yellow;text-align: center;">
+                        <a class="text-center" style="margin-top: auto; margin-bottom: auto;">{{i + 1}}</a>
+                    </th>
+                    <input hidden value={{i}} #index type="text">
+                    <th class="col-3 col-sm-3 " style="border: solid 0px red;text-align: center;">
+                        <img src={{weather.link}} class="img-fluid" width="60" style="border-radius: 50%;">
+                    </th>
+                    <th class="col-3 col-sm-3" style="border: solid 0px red;text-align: center;">
+                        <a (click)="test(weather.city, weather.state)" ngbTooltip={{weather.city}}
+                            style="color:blue;cursor: pointer;">{{weather.city}}</a>
+                    </th>
+                    <input hidden value={{weather.city}} #city type="text">
+                    <th class="col-2  col-sm-2" style="border: solid 0px red;text-align: center;">
+                        {{weather.state}}
+                    </th>
+                    <th class="col-3  col-sm-3" style="border: solid 0px red;text-align: center;">
+                        <button type="button" class="btn btn-light" (click)="[deleteItem(city.value, index.value)]">
+                            <i class="material-icons fluid" style="color:rgb(205,164,70)">
+                                delete
+                            </i></button>
+                    </th>
+                </tr>
+            </div>
+        </div>
+    </table>
+</div>

@@ -1,0 +1,103 @@
+<div class="container col-12 offset-sm-1 col-sm-10" style="border:solid 0px red">
+    <div class="row">
+        <span style="color:white">12</span>
+
+    </div>
+    <div class="row">
+        <span style="color:white">12</span>
+    </div>
+
+
+</div>
+<div style="border:solid 0px green;margin-left:auto;margin-right:auto;display:block" id="chartContainer">
+    <div class="row">
+        <span style="color:white">12</span>
+    </div>
+    <div class="row">
+        <span style="color:white">12</span>
+    </div>
+</div>
+<button hidden type="button" class="btn btn-primary" #test data-toggle="modal" data-target="#day1">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade  col-12 col-sm-4 offset-sm-4" id="day1" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="false" style="border: solid 0px red;">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content " style="border:solid 0px red">
+            <div class="modal-header" style="background-color: rgb(104,138,160); border:solid 0px blue">
+                <h5 class="modal-title" id="exampleModalLabel" style="padding-left: 0%;">{{dailyDate}}
+                    <!-- 09/11/2019</h5> -->
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="background-color: rgb(162,205,234);">
+                <div class="row">
+                    <div class="col-6 col-sm-9 offset-1" style="border:solid 0px red">
+                        <span id="city">{{dailyCity}}
+                            <!-- Los Angeles</span> -->
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-7 offset-1" style="border:solid 0px red;">
+                        <!-- <span class="tmp">{{dailyTemp}}23</span><span class="tmp" -->
+                        <span class="tmp">{{dailyTemp}}</span><span class="tmp"
+                            style="color:rgb(162,205,234)">1</span><span class="tmp" id="f">F</span>
+                        <div id="sign"><img
+                                src="https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_shape_oval-512.png"
+                                class="img-fluid">
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <span id="sum" style="border:solid 0px red">{{dailySum}}</span>
+                    </div>
+                    <div class="col-sm-1 col-2 offset-2  offset-sm-1" id="icon" style="border:solid 0px yellow;">
+                        <!-- <img src={{link}} class="img-fluid" width="40vmax" height="40vmax">{{link}} -->
+                        <div id="pic" style="border:solid 0px green">
+                            <img *ngIf="dailyIcon" class="img-fluid" [src]="dailyIcon">
+                            <!-- <img class="img-fluid"
+                                src="https://cdn3.iconfinder.com/data/icons/weather-344/142/snow-512.png"> -->
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <!-- <div class="col-7 offset-5">
+                    Daily Percipitation : 0{{dailyPer}}
+                </div>
+                <div class="col-7 offset-5">
+                    Chance of Rain : 0{{dailyRai}} %
+                </div>
+                <div class="col-7 offset-5">
+                    Wind Speed : 3.15{{dailyWs}} mph
+                </div>
+                <div class="col-7 offset-5">
+                    Humidity : 45{{dailyHum}} %
+                </div>
+                <div class="col-7 offset-5">
+                    Visibility : 8.99{{dailyVisi}} miles
+                </div> -->
+                <div class="col-7 offset-5">
+                    Daily Percipitation : {{dailyPer}}
+                </div>
+                <div class="col-7 offset-5">
+                    Chance of Rain : {{dailyRai}} %
+                </div>
+                <div class="col-7 offset-5">
+                    Wind Speed : {{dailyWs}} mph
+                </div>
+                <div class="col-7 offset-5">
+                    Humidity : {{dailyHum}} %
+                </div>
+                <div class="col-7 offset-5">
+                    Visibility : {{dailyVisi}} miles
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

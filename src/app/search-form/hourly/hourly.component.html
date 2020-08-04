@@ -1,0 +1,20 @@
+<div class="row">
+    <span style="color:white">1</span>
+</div>
+<select name="category" class="browser-default custom-select offset-sm-1 col-md-4 " [(ngModel)]="selected"
+    (change)="choose()" placeholder="Temperature">
+    <option value="temp">Temperature</option>
+    <option value="pres">Pressure</option>
+    <option value="humi">Humidity</option>
+    <option value="oz">Ozone</option>
+    <option value="visi">Visibility</option>
+    <option value="ws">Wind Speed</option>
+</select>
+<div class="row">
+    <span style="color:white">1</span>
+    <button #childButton hidden (click)="showChart_temp()"></button>
+
+</div>
+<div style="border:solid 0px red;">
+    <canvas id="chart" #chart> {{chart}}</canvas>
+</div>

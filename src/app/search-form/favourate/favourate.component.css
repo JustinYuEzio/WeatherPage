@@ -1,0 +1,17 @@
+table,
+thead,
+tr,
+tbody,
+th,
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table td, .table tr, .table th,.tr th,.table tr th{
+  text-align: center;
+  vertical-align: middle;
+}
+#form{
+    vertical-align: middle;
+}
